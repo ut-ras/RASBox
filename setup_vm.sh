@@ -21,10 +21,11 @@ echo "This might take a while. The terminal will prompt you to input the passwor
 
 # make sure ubuntu is up to date
 sudo apt update
-sudo apt upgrade
+# lubuntu specific
+# sudo /usr/bin/lubuntu-upgrader --full-upgrade
 
 # install GIMP
-# TODO: ask if they want to install gimp
+# TODO: prompt to install gimp or skip
 sudo add-apt-repository ppa:otto-kesselgulasch/gimp
 sudo apt-get update
 sudo apt-get install gimp
