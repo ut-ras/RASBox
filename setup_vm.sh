@@ -5,7 +5,7 @@
 
 # When developing a new VM image, the developer should prepare the following:
 # * manually install git, cowsay, and lolcat
-#   * sudo apt install git && cowsay && lolcat
+#   * sudo apt install git cowsay lolcat
 # * clone RASBox
 #   * cd ~/
 #   * git clone https://github.com/ut-ras/RASBox.git
@@ -16,13 +16,15 @@
 
 # TODO: check if flag in env variables indicates that setup is complete
 
-echo "Starting VM setup script. This might take a while, and be aware that the terminal will prompt you for input at times. The password is 'ReallyAwesomeStudents', and say 'Y' when asked to install software."
+echo "Starting VM setup script."
+echo "This might take a while. The terminal will prompt you to input the password (ReallyAwesomeStudents), and to confirm installing software. Say 'Y' when asked to install software."
 
 # make sure ubuntu is up to date
 sudo apt update
 sudo apt upgrade
 
 # install GIMP
+# TODO: ask if they want to install gimp
 sudo add-apt-repository ppa:otto-kesselgulasch/gimp
 sudo apt-get update
 sudo apt-get install gimp
