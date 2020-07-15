@@ -53,8 +53,5 @@ code --install-extension vscode-icons-team.vscode-icons
 # change flag in env variables to no longer prompt to run this script
 sudo sed -i 's/export INIT_SETUP=0/export INIT_SETUP=1/' ~/.profile
 
-echo "The VM setup script has successfully completed. You may want to reboot your machine for some changes to take effect. Opening up the RASBox User Guide."
-
-
-# open up vscode to the RASBox guide
-razzle
+echo "The VM setup script has successfully completed. You may want to reboot your machine for some changes to take effect."
+echo "To open up the RASBox User Guide, type `razzle` into the command line interface."
