@@ -15,13 +15,20 @@
 # Additionally, tell the user to follow the prompts in the command line.
 
 # TODO: check if flag in env variables indicates that setup is complete
+if [ $INIT_SETUP -eq 1 ]
+then
+	echo "The INIT_SETUP flag in ~/.profile has already been set. Early exit."
+	exit
+fi
 
 echo "Starting VM setup script."
 echo "This might take a while. The terminal will prompt you to input the password (ReallyAwesomeStudents), and to confirm installing software. Say 'Y' when asked to install software."
 
 # make sure ubuntu is up to date
 sudo apt update
-sudo apt upgrade
+# sudo apt upgrade
+# lubuntu specific - ignored if the user tries to update from prompt beforehand
+sudo /usr/bin/lubuntu-upgrader --full-upgrade
 
 # install GIMP
 # TODO: ask if they want to install gimp
@@ -43,9 +50,11 @@ code --install-extension esbenp.prettier-vscode
 code --install-extension Gruntfuggly.todo-tree
 code --install-extension vscode-icons-team.vscode-icons
 
-# TODO: change flag in env variables to no longer prompt to run this script
+# change flag in env variables to no longer prompt to run this script
+sudo sed -i 's/export INIT_SETUP=0/export INIT_SETUP=1/' ~/.profile
 
-echo "The VM setup script has successfully completed. Opening up the RASBox User Guide."
+echo "The VM setup script has successfully completed. You may want to reboot your machine for some changes to take effect. Opening up the RASBox User Guide."
+
 
 # open up vscode to the RASBox guide
 razzle
