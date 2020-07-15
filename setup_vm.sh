@@ -3,18 +3,7 @@
 # Author: Matthew Yu (matthewjkyu@gmail.com)
 # This script runs on first startup, setting up the VM and installing software for use Doing so reduces the size of the VM image for export purposes.
 
-# When developing a new VM image, the developer should prepare the following:
-# * manually install git, cowsay, and lolcat
-#   * sudo apt install git cowsay lolcat
-# * clone RASBox
-#   * cd ~/
-#   * git clone https://github.com/ut-ras/RASBox.git
-# * on first setup, insert a prompt to trigger setup_vm.sh (on every startup until the setup script has executed successfully)
-#   * at the end of ~/.bashrc: cowsay -f tux "Welcome to RASBox! If this is your first time here, check out our RASBox guide. Just enter in the command 'razzle'!" | lolcat
-# * insert a prompt to read the RASbox_User_Guide (always on terminal startup)
-# Additionally, tell the user to follow the prompts in the command line.
-
-# TODO: check if flag in env variables indicates that setup is complete
+# check if flag in env variables indicates that setup is complete
 if [ $INIT_SETUP -eq 1 ]
 then
 	echo "The INIT_SETUP flag in ~/.profile has already been set. Early exit."
