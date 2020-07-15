@@ -1,4 +1,6 @@
 echo "Setting up... Enter in your password when prompted."
+# install dependencies
+sudo apt-get install git build-essential openocd screen gcc-arm-none-eabi gdb libnewlib-arm-none-eabi
 # Unpack Stellarisware
 cd Rasware/Downloads
 tar vfx StellarisWare.tar.bz2
