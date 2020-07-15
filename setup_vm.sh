@@ -1,5 +1,5 @@
 # setup_vm.sh
-# Last Modified: 7/14/20
+# Last Modified: 7/15/20
 # Author: Matthew Yu (matthewjkyu@gmail.com)
 # This script runs on first startup, setting up the VM and installing software for use Doing so reduces the size of the VM image for export purposes.
 
@@ -31,7 +31,7 @@ sudo apt update
 sudo /usr/bin/lubuntu-upgrader --full-upgrade
 
 # install GIMP
-# TODO: ask if they want to install gimp
+# TODO: prompt to install gimp or skip
 sudo add-apt-repository ppa:otto-kesselgulasch/gimp
 sudo apt-get update
 sudo apt-get install gimp
