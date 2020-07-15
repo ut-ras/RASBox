@@ -32,7 +32,7 @@ The setup script command is:
 
 `sh setup_rasware.sh`
 
-**NOTE:** You may need to fix the display resolution after the script runs. Right click on the background and click on `Display Settings` to so.
+**NOTE:** You may need to fix the display resolution after the script runs. If you're running Lubuntu 20.04, open up the Monitor Settings program and adjust the resolution. Make sure to save after applying changes. For Ubuntu 20.04, Right click on the background and click on `Display Settings` to so.
 
 What this script does is unpack the tools needed to run the TM4C, StellarisWare, build it, set up the udev (userpace /dev, a device manager) rules, and then procedurally build all of the other folders in the RASWare workspace.
 
